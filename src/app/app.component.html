@@ -1,5 +1,10 @@
 <div class="card-container">
   <h1>Try to take a snapshot</h1>
+  <div class="buttons-container">
+    <button (click)="takeNormalScreenshot()">Normal Snapshot</button>
+    <button (click)="takeCoolScreenshot()" class="cool-button">
+      Cool Snapshot
+    </button>
+  </div>
   <app-poem id="capture"></app-poem>
-  <button (click)="takeScreenshot()">Take Snapshot</button>
 </div>

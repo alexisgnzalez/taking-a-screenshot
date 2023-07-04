@@ -10,7 +10,7 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 export class AppComponent {
   title = 'taking-a-screenshot';
   constructor(private deviceService: DeviceDetectorService) {}
-  takeScreenshot() {
+  takeCoolScreenshot() {
     console.log('screenshoniando...');
     html2canvas(
       // @ts-ignore
@@ -22,6 +22,16 @@ export class AppComponent {
       } else {
         this.share(canvas);
       }
+    });
+  }
+
+  takeNormalScreenshot() {
+    html2canvas(
+      // @ts-ignore
+      document.querySelector('#capture'),
+      { useCORS: true }
+    ).then((canvas) => {
+      this.share(canvas);
     });
   }
 
